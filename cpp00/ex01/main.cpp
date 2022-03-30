@@ -6,7 +6,7 @@
 /*   By: tidurand <tidurand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/29 08:49:36 by tidurand          #+#    #+#             */
-/*   Updated: 2022/03/29 14:37:02 by tidurand         ###   ########.fr       */
+/*   Updated: 2022/03/30 09:32:30 by tidurand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,10 @@ int main()
 		if (std::strcmp(answer, "ADD") == 0)
 		{
 			Contact contact;
-			contact.add();
+			phonebook.add();
 		}
 		if (std::strcmp(answer, "SEARCH") == 0)
-			phonebook.print();
+			phonebook.search();
 		if (std::strcmp(answer, "EXIT") == 0)
 			break;
 		else

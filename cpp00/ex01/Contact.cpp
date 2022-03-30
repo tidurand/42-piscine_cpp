@@ -6,7 +6,7 @@
 /*   By: tidurand <tidurand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/29 09:50:33 by tidurand          #+#    #+#             */
-/*   Updated: 2022/03/29 13:46:37 by tidurand         ###   ########.fr       */
+/*   Updated: 2022/03/30 09:39:04 by tidurand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,34 @@ Contact::~Contact()
 	return;
 }
 
-void	Contact::add(void)
+/*std::string	Contact::get_first_name(void) const
+{
+	return this->first_name;
+}
+
+
+void	Contact::set_first_name(std::string new_first_name)
+{
+	this->first_name = new_first_name;
+}*/
+
+void	Contact::display_contact(void) const
+{
+	std::cout << this->first_name << std::endl;
+	std::cout << this->last_name << std::endl;
+	std::cout << this->nickname << std::endl;
+}
+
+void	Contact::display_details(void) const
+{
+	std::cout << this->first_name << std::endl;
+	std::cout << this->last_name << std::endl;
+	std::cout << this->nickname << std::endl;
+	std::cout << this->phone_number << std::endl;
+	std::cout << this->darkest_secret << std::endl;
+}
+
+void	Contact::create(void)
 {
 	std::cout << "Firstname :" << std::endl;
 	std::cin >> this->first_name;

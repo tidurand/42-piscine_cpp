@@ -6,7 +6,7 @@
 /*   By: tidurand <tidurand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/29 08:54:45 by tidurand          #+#    #+#             */
-/*   Updated: 2022/03/29 14:36:59 by tidurand         ###   ########.fr       */
+/*   Updated: 2022/03/30 09:42:54 by tidurand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,12 @@ class PhoneBook
 		PhoneBook(void);
 		~PhoneBook();
 		
-		void	print(void);
+		void	add(void);
+		void	search(void);
 		Contact contact[8];
 
 	private:
-		int	index;
+		static int	nb_contacts;
 };
 
 #endif
