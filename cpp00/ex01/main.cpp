@@ -20,12 +20,13 @@ int main()
 	char	answer[512];
 	std::cout << "Enter ADD, SEARCH or EXIT" << std::endl;
 	PhoneBook phonebook;
+	phonebook.nb_contacts = 0;
 	while (42)
 	{
 		std::cin >> answer;
 		if (std::strcmp(answer, "ADD") == 0)
 		{
-			Contact contact;
+			//Contact contact;
 			phonebook.add();
 		}
 		if (std::strcmp(answer, "SEARCH") == 0)

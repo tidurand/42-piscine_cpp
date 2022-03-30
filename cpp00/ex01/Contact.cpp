@@ -15,13 +15,11 @@
 
 Contact::Contact(void)
 {
-	std::cout << "Contact Constructor" << std::endl;
 	return;
 }
 
 Contact::~Contact()
 {
-	std::cout << "Contact Destructor" << std::endl;
 	return;
 }
 
@@ -38,18 +36,18 @@ void	Contact::set_first_name(std::string new_first_name)
 
 void	Contact::display_contact(void) const
 {
-	std::cout << this->first_name << std::endl;
-	std::cout << this->last_name << std::endl;
+	std::cout << this->first_name << "|";
+	std::cout << this->last_name << "|";
 	std::cout << this->nickname << std::endl;
 }
 
 void	Contact::display_details(void) const
 {
-	std::cout << this->first_name << std::endl;
-	std::cout << this->last_name << std::endl;
-	std::cout << this->nickname << std::endl;
-	std::cout << this->phone_number << std::endl;
-	std::cout << this->darkest_secret << std::endl;
+	std::cout << "Firstname :" << this->first_name << std::endl;
+	std::cout << "Lastname :" << this->last_name << std::endl;
+	std::cout << "Nickname :" << this->nickname << std::endl;
+	std::cout << "Phone number :" << this->phone_number << std::endl;
+	std::cout << "Darkest secret :" << this->darkest_secret << std::endl;
 }
 
 void	Contact::create(void)

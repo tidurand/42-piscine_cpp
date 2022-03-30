@@ -25,8 +25,13 @@ PhoneBook::~PhoneBook()
 
 void	PhoneBook::add(void)
 {
-	contact[nb_contacts].create();
-	this->nb_contacts++;
+	if (nb_contacts < 8)
+	{
+		contact[nb_contacts].create();
+		this->nb_contacts++;
+	}
+	else
+		std::cout << "Too many contacts" << std::endl;
 }
 
 void	PhoneBook::search(void)
@@ -35,7 +40,7 @@ void	PhoneBook::search(void)
 	std::cout << "     index|first name| last name|  nickname" << std::endl;
 	for (int i = 0; i < nb_contacts; i++)
 	{
-		contact[0].display_contact();
+		contact[i].display_contact();
 	}
 	
 }

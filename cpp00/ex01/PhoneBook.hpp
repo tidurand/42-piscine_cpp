@@ -22,9 +22,10 @@ class PhoneBook
 		void	add(void);
 		void	search(void);
 		Contact contact[8];
+		int	nb_contacts;
 
 	private:
-		static int	nb_contacts;
+		
 };
 
 #endif
