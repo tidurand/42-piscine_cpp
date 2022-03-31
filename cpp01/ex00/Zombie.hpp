@@ -1,33 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
+/*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tidurand <tidurand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/29 08:54:45 by tidurand          #+#    #+#             */
-/*   Updated: 2022/03/31 17:09:45 by tidurand         ###   ########.fr       */
+/*   Created: 2022/03/31 17:04:15 by tidurand          #+#    #+#             */
+/*   Updated: 2022/03/31 17:20:21 by tidurand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_HPP
-# define PHONEBOOK_HPP
-#include "Contact.hpp"
-class PhoneBook
+#include <iostream>
+
+class Zombie
 {
 	public:
-		PhoneBook(void);
-		~PhoneBook();
-		
-		void	add(void);
-		void	search(void);
-		Contact contact[8];
-		int		get_nb_contacts(void) const;
-		void	set_nb_contacts(int new_nb_contacts);
-
+		Zombie(void);
+		~Zombie();
+		void	announce(void) const;
+		std::string		get_name(void) const;
+		void	set_name(std::string name);
 	private:
-		int	nb_contacts;
-		int index;
+		std::string name;
 };
 
-#endif
