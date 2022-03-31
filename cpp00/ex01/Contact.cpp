@@ -6,12 +6,13 @@
 /*   By: tidurand <tidurand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/29 09:50:33 by tidurand          #+#    #+#             */
-/*   Updated: 2022/03/30 09:39:04 by tidurand         ###   ########.fr       */
+/*   Updated: 2022/03/31 16:53:50 by tidurand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include "Contact.hpp"
+#include "PhoneBook.hpp"
 
 Contact::Contact(void)
 {
@@ -23,22 +24,35 @@ Contact::~Contact()
 	return;
 }
 
-/*std::string	Contact::get_first_name(void) const
-{
-	return this->first_name;
+int is_numeric(std::string str) {
+   for (int i = 0; i < (int)str.length(); i++)
+   {
+      if (isdigit(str[i]) == 0)
+         return 0;
+   }
+      return 1;
 }
 
-
-void	Contact::set_first_name(std::string new_first_name)
+std::string	Contact::good_display(std::string str)
 {
-	this->first_name = new_first_name;
-}*/
+	if (str.length() > 10)
+	{
+		str = str.substr(0, 9);
+		str = str + ".";
+	}
+	while (str.length() < 10)
+	{
+		str = " " + str;
+	}
+	return str;
+}
 
-void	Contact::display_contact(void) const
+void	Contact::display_contact(void)
 {
-	std::cout << this->first_name << "|";
-	std::cout << this->last_name << "|";
-	std::cout << this->nickname << std::endl;
+	
+	std::cout << good_display(this->first_name) << "|";
+	std::cout << good_display(this->last_name) << "|";
+	std::cout << good_display(this->nickname) << std::endl;
 }
 
 void	Contact::display_details(void) const
@@ -60,6 +74,12 @@ void	Contact::create(void)
 	std::cin >> this->nickname;
 	std::cout << "Phone number :" << std::endl;
 	std::cin >> this->phone_number;
+	while (is_numeric(this->phone_number) == 0)
+	{
+		std::cout << "Bad phone number" << std::endl;
+		std::cout << "Phone number :" << std::endl;
+		std::cin >> this->phone_number;
+	}
 	std::cout << "Darkest secret :" << std::endl;
 	std::cin >> this->darkest_secret;
 }

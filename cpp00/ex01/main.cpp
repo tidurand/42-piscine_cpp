@@ -6,7 +6,7 @@
 /*   By: tidurand <tidurand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/29 08:49:36 by tidurand          #+#    #+#             */
-/*   Updated: 2022/03/30 09:32:30 by tidurand         ###   ########.fr       */
+/*   Updated: 2022/03/31 15:02:34 by tidurand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int main()
 	char	answer[512];
 	std::cout << "Enter ADD, SEARCH or EXIT" << std::endl;
 	PhoneBook phonebook;
-	phonebook.nb_contacts = 0;
+	phonebook.set_nb_contacts(0);
 	while (42)
 	{
 		std::cin >> answer;
