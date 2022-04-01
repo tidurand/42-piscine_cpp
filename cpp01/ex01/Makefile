@@ -6,11 +6,11 @@
 #    By: tidurand <tidurand@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/31 17:01:42 by tidurand          #+#    #+#              #
-#    Updated: 2022/04/01 10:52:31 by tidurand         ###   ########.fr        #
+#    Updated: 2022/04/01 10:52:40 by tidurand         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS =	main.cpp Zombie.cpp newZombie.cpp randomChump.cpp
+SRCS =	main.cpp Zombie.cpp zombieHorde.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 

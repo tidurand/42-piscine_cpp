@@ -1,21 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   newZombie.cpp                                      :+:      :+:    :+:   */
+/*   Zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tidurand <tidurand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/31 17:21:26 by tidurand          #+#    #+#             */
-/*   Updated: 2022/04/01 10:47:29 by tidurand         ###   ########.fr       */
+/*   Created: 2022/03/31 17:04:45 by tidurand          #+#    #+#             */
+/*   Updated: 2022/04/01 11:06:14 by tidurand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-Zombie* newZombie( std::string name )
+Zombie::Zombie(void)
 {
-	Zombie *zombie;
-	zombie = new Zombie;
-	zombie->set_name(name);
-	return zombie;
+}
+
+Zombie::~Zombie()
+{
+    std::cout << this->name << " die" << std::endl;
+}
+
+
+
+std::string	Zombie::get_name(void) const
+{
+	return this->name;
+}
+
+
+void	Zombie::set_name(std::string new_name)
+{
+	this->name = new_name;
+}
+
+void	Zombie::announce(void) const
+{
+	std::cout << this->name << ": BraiiiiiiinnnzzzZ..." << std::endl;
 }
