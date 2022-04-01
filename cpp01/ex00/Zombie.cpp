@@ -6,7 +6,7 @@
 /*   By: tidurand <tidurand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 17:04:45 by tidurand          #+#    #+#             */
-/*   Updated: 2022/03/31 17:23:15 by tidurand         ###   ########.fr       */
+/*   Updated: 2022/04/01 10:05:09 by tidurand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ Zombie::Zombie(void)
 
 Zombie::~Zombie()
 {
-	std::cout << this->name << "die" << std::endl;
+	std::cout << this->name << " die" << std::endl;
 }
 
 std::string	Zombie::get_name(void) const
