@@ -6,7 +6,7 @@
 /*   By: tidurand <tidurand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/26 11:28:30 by tidurand          #+#    #+#             */
-/*   Updated: 2022/03/29 11:51:05 by tidurand         ###   ########.fr       */
+/*   Updated: 2022/04/05 11:11:42 by tidurand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,21 @@
 
 int main(int ac, char **av)
 {
-	(void)av;
 	if (ac > 1)
 	{
 		for (int i = 1; i < ac; i++)
 		{
-			for (int j = 0; av[i][j]; j++)
+			std::string str = av[i];
+			for (std::string::iterator j = str.begin(); j < str.end(); j++)
 			{
-				if (av[i][j] >= 'a' && av[i][j] <= 'z')
+				if (*j >= 'a' && *j <= 'z')
 				{
-					char c = std::toupper(av[i][j]);
+					char c = std::toupper(*j);
 					std::cout << c;
 				}
 				else
-					std::cout << av[i][j];
+					std::cout << *j;
 			}
-			std::cout << " ";
 		}
 		std::cout << std::endl;
 	}

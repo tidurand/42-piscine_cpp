@@ -1,34 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tidurand <tidurand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/29 08:54:45 by tidurand          #+#    #+#             */
-/*   Updated: 2022/04/06 11:11:46 by tidurand         ###   ########.fr       */
+/*   Created: 2022/04/06 08:25:10 by tidurand          #+#    #+#             */
+/*   Updated: 2022/04/09 09:16:38 by tidurand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_HPP
-# define PHONEBOOK_HPP
-#include "Contact.hpp"
+#include "Harl.hpp"
 
-class PhoneBook
+int main()
 {
-	public:
-		PhoneBook(void);
-		~PhoneBook();
-		
-		void	add(void);
-		void	search(void);
-		void	set_nb_contacts(int new_nb_contacts);
-		Contact contact[8];
+	Harl harl;
+	void (Harl::*ptr)(std::string level);
 
-	private:
-		int	nb_contacts;
-		std::string new_index;
-		int index;
-};
+	ptr = &Harl::complain;
 
-#endif
+	(harl.*ptr)("debug");
+	(harl.*ptr)("info");
+	(harl.*ptr)("warning");
+	(harl.*ptr)("error");
+	(harl.*ptr)("nothing");
+
+	return 0;
+}

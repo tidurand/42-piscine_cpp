@@ -6,11 +6,11 @@
 #    By: tidurand <tidurand@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/31 17:01:42 by tidurand          #+#    #+#              #
-#    Updated: 2022/04/05 11:24:30 by tidurand         ###   ########.fr        #
+#    Updated: 2022/04/09 09:39:49 by tidurand         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS =	main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
+SRCS =	main.cpp Harl.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
@@ -18,7 +18,7 @@ CC = c++
 
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
-NAME = human
+NAME = harlFilter
 
 all: $(NAME)
 

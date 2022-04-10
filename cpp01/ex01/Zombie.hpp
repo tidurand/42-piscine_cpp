@@ -6,10 +6,12 @@
 /*   By: tidurand <tidurand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 17:04:15 by tidurand          #+#    #+#             */
-/*   Updated: 2022/04/01 11:04:44 by tidurand         ###   ########.fr       */
+/*   Updated: 2022/04/09 10:13:41 by tidurand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef ZOMBIE_HPP
+# define ZOMBIE_HPP
 #include <iostream>
 
 class Zombie
@@ -26,3 +28,5 @@ class Zombie
 };
 
 	Zombie* zombieHorde(int N, std::string name);
+
+#endif

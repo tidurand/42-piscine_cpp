@@ -6,11 +6,13 @@
 #    By: tidurand <tidurand@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/26 11:24:34 by tidurand          #+#    #+#              #
-#    Updated: 2022/03/29 08:18:35 by tidurand         ###   ########.fr        #
+#    Updated: 2022/04/02 10:18:29 by tidurand         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRCS =	megaphone.cpp
+
+CC = c++
 
 OBJS = $(SRCS:.cpp=.o)
 
@@ -20,8 +22,11 @@ NAME = megaphone
 
 all: $(NAME)
 
-$(NAME):	$(OBJS)
-		c++ $(FLAGS) $(SRCS) -o $(NAME)
+$(NAME): $(OBJS)
+		$(CC) $(FLAGS) $(SRCS) -o $(NAME)
+
+$(OBJS): $(SRCS)
+		$(CC) $(FLAGS) -c $< -o $@
 
 clean:
 		rm -f $(OBJS)

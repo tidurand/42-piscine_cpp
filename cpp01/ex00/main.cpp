@@ -6,7 +6,7 @@
 /*   By: tidurand <tidurand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 17:25:20 by tidurand          #+#    #+#             */
-/*   Updated: 2022/04/01 10:52:59 by tidurand         ###   ########.fr       */
+/*   Updated: 2022/04/09 10:11:42 by tidurand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ int main()
 	// Zombie *mike;
 	// mike = randomChump("MIKE");
 	// mike->announce();
-	// mike->~Zombie();
+
+	//newZombie("ABC");
 	return 0;
 }

@@ -1,34 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
+/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tidurand <tidurand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/29 08:54:45 by tidurand          #+#    #+#             */
-/*   Updated: 2022/04/06 11:11:46 by tidurand         ###   ########.fr       */
+/*   Created: 2022/04/09 16:01:29 by tidurand          #+#    #+#             */
+/*   Updated: 2022/04/09 17:46:11 by tidurand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_HPP
-# define PHONEBOOK_HPP
-#include "Contact.hpp"
+#ifndef CLAPTRAP_HPP
+# define CLAPTRAP_HPP
+#include <iostream>
 
-class PhoneBook
+class ClapTrap
 {
 	public:
-		PhoneBook(void);
-		~PhoneBook();
-		
-		void	add(void);
-		void	search(void);
-		void	set_nb_contacts(int new_nb_contacts);
-		Contact contact[8];
+		ClapTrap(std::string name);
+		~ClapTrap();
 
+		void attack(const std::string& target);
+		void takeDamage(unsigned int amount);
+		void beRepaired(unsigned int amount);
 	private:
-		int	nb_contacts;
-		std::string new_index;
-		int index;
+		std::string name;
+		int hitPoints;
+		int energyPoints;
+		int attackDamage;		
 };
+
+
 
 #endif
