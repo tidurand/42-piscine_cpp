@@ -10,7 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int main ()
+#include "ClapTrap.hpp"
+
+int main()
 {
+	ClapTrap abc("ABC");
+	ClapTrap def("DEF");
+	ClapTrap ghi("GHI", 10, 5, 3);
+	abc.attack("DEF");
+	ghi.attack("untruc");
 	return 0;
 }
