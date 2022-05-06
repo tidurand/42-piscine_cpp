@@ -6,7 +6,7 @@
 /*   By: tidurand <tidurand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/09 16:01:08 by tidurand          #+#    #+#             */
-/*   Updated: 2022/05/05 09:48:40 by tidurand         ###   ########.fr       */
+/*   Updated: 2022/05/06 13:33:28 by tidurand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ void	ClapTrap::attack(const std::string& target)
 		std::cout << "Not enough energy" << std::endl;
 		return ;
 	}
-	this->_energyPoints -= 1;
+	_energyPoints -= 1;
 	std::cout << "ClapTrap " << _name << " attack " << target;
 	std::cout << ", causing " << _attackDamage << " points of damage !" << std::endl;
 	std::cout << "Il reste " << _energyPoints << " points d'energie !" << std::endl;

@@ -1,28 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tidurand <tidurand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/09 16:00:45 by tidurand          #+#    #+#             */
-/*   Updated: 2022/05/05 09:49:47 by tidurand         ###   ########.fr       */
+/*   Created: 2022/05/04 16:39:05 by tidurand          #+#    #+#             */
+/*   Updated: 2022/05/06 13:35:01 by tidurand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
+#ifndef SCAVTRAP
+# define SCAVTRAP
+# include <iostream>
+# include "ClapTrap.hpp"
 
-int main()
+class ScavTrap : public ClapTrap
 {
-	ClapTrap abc("ABC");
-	ClapTrap def;
-	ClapTrap ghi(def);
-	ClapTrap mno("QWERTY");
-	mno = abc;
-	abc.attack("untruc");
-	def.attack("untruc");
-	mno.attack("untruc");
-	def.setName("DEF");
-	def.attack("untruc");
-	return 0;
-}
+	public:
+		ScavTrap(void);
+		ScavTrap(std::string name);
+		ScavTrap (const ScavTrap& src);
+		~ScavTrap();
+		ScavTrap &operator=(const ScavTrap& rhs);
+
+		void guardGate();
+		
+	private:
+};
+
+#endif

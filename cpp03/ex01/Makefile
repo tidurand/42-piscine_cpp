@@ -6,13 +6,13 @@
 #    By: tidurand <tidurand@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/31 17:01:42 by tidurand          #+#    #+#              #
-#    Updated: 2022/05/06 12:14:07 by tidurand         ###   ########.fr        #
+#    Updated: 2022/05/06 12:14:05 by tidurand         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS =	main.cpp ClapTrap.cpp
+SRCS =	main.cpp ClapTrap.cpp ScavTrap.cpp
 
-INCS = ClapTrap.hpp
+INCS = ClapTrap.hpp ScavTrap.hpp
 
 OBJS = $(SRCS:.cpp=.o)
 

@@ -6,7 +6,7 @@
 /*   By: tidurand <tidurand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/09 16:01:29 by tidurand          #+#    #+#             */
-/*   Updated: 2022/05/05 09:46:47 by tidurand         ###   ########.fr       */
+/*   Updated: 2022/05/06 12:15:22 by tidurand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ class ClapTrap
 		void setAttackDamage(int nb);
 		void setName(std::string name);
 	
-	private:
+	protected:
 		std::string _name;
 		int _hitPoints;
 		int _energyPoints;
