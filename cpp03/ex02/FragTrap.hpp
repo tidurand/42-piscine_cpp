@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FrapTrap.hpp                                       :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tidurand <tidurand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 14:30:13 by tidurand          #+#    #+#             */
-/*   Updated: 2022/05/06 14:32:03 by tidurand         ###   ########.fr       */
+/*   Updated: 2022/05/06 16:52:41 by tidurand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ class FragTrap : public ClapTrap
 		~FragTrap();
 		FragTrap &operator=(const FragTrap& rhs);
 
+		void attack(const std::string& target);
 		void highFivesGuys(void);
 		
 	private:

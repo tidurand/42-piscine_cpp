@@ -6,7 +6,7 @@
 /*   By: tidurand <tidurand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 16:39:05 by tidurand          #+#    #+#             */
-/*   Updated: 2022/05/06 13:35:01 by tidurand         ###   ########.fr       */
+/*   Updated: 2022/05/06 16:51:41 by tidurand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ class ScavTrap : public ClapTrap
 		~ScavTrap();
 		ScavTrap &operator=(const ScavTrap& rhs);
 
+		void attack(const std::string& target);
 		void guardGate();
 		
 	private:
