@@ -11,16 +11,12 @@ do
 # include <string>
 //# include \".hpp\"
 
-using	std::string;
-using	std::cout;
-using	std::endl;
-
 class	${newclass}
 {
 	public:
 	${newclass}();
-	${newclass}(const ${newclass}&);
-	${newclass}	&operator=(const ${newclass}&);
+	${newclass}(const ${newclass}& src);
+	${newclass}	&operator=(const ${newclass}& rhs);
 	~${newclass}();
 
 	protected:
@@ -35,12 +31,12 @@ ${newclass}::${newclass}(string name)
 {
 
 }
-${newclass}::${newclass}(const ${newclass}& toCopy)
+${newclass}::${newclass}(const ${newclass}& src)
 {
-
+	*this = src;
 }
 
-${newclass}	&${newclass}::operator=(const ${newClass}& toAssign)
+${newclass}	&${newclass}::operator=(const ${newClass}& rhs)
 {
 
 	return (*this);
