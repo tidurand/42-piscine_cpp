@@ -6,7 +6,7 @@
 /*   By: tidurand <tidurand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 16:40:58 by tidurand          #+#    #+#             */
-/*   Updated: 2022/05/06 13:40:48 by tidurand         ###   ########.fr       */
+/*   Updated: 2022/05/06 16:49:54 by tidurand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,20 @@ ScavTrap &ScavTrap::operator=(const ScavTrap& rhs)
 	_hitPoints = rhs._hitPoints;
 	_energyPoints = rhs._energyPoints;
 	_attackDamage = rhs._attackDamage;
+	return *this;
+}
+
+void	ScavTrap::attack(const std::string& target)
+{
+	if (_energyPoints < 1)
+	{
+		std::cout << "Not enough energy" << std::endl;
+		return ;
+	}
+	_energyPoints -= 1;
+	std::cout << "ScavTrap " << _name << " attack " << target;
+	std::cout << ", causing " << _attackDamage << " points of damage !" << std::endl;
+	std::cout << "Il reste " << _energyPoints << " points d'energie !" << std::endl;
 }
 
 

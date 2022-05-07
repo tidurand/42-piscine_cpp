@@ -1,33 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tidurand <tidurand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/04 16:39:05 by tidurand          #+#    #+#             */
-/*   Updated: 2022/05/06 16:50:28 by tidurand         ###   ########.fr       */
+/*   Created: 2022/05/07 03:37:32 by tidurand          #+#    #+#             */
+/*   Updated: 2022/05/07 04:49:11 by tidurand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCAVTRAP
-# define SCAVTRAP
-# include <iostream>
-# include "ClapTrap.hpp"
+#ifndef BRAIN_HPP
+# define BRAIN_HPP
+# include "Animal.hpp"
 
-class ScavTrap : public ClapTrap
+class Brain
 {
 	public:
-		ScavTrap(void);
-		ScavTrap(std::string name);
-		ScavTrap (const ScavTrap& src);
-		~ScavTrap();
-		ScavTrap &operator=(const ScavTrap& rhs);
+		Brain(void);
+		Brain (const Brain& src);
+		~Brain();
+		Brain &operator=(const Brain& rhs);
 
-		void attack(const std::string& target);
-		void guardGate();
-		
 	private:
+		std::string ideas[100];
 };
 
 #endif

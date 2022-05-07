@@ -1,33 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tidurand <tidurand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/04 16:39:05 by tidurand          #+#    #+#             */
-/*   Updated: 2022/05/06 16:50:28 by tidurand         ###   ########.fr       */
+/*   Created: 2022/05/07 03:39:44 by tidurand          #+#    #+#             */
+/*   Updated: 2022/05/07 04:52:33 by tidurand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCAVTRAP
-# define SCAVTRAP
-# include <iostream>
-# include "ClapTrap.hpp"
+#include "Brain.hpp"
 
-class ScavTrap : public ClapTrap
+Brain::Brain(void)
 {
-	public:
-		ScavTrap(void);
-		ScavTrap(std::string name);
-		ScavTrap (const ScavTrap& src);
-		~ScavTrap();
-		ScavTrap &operator=(const ScavTrap& rhs);
+	std::cout << "Brain Default Constructor" << std::endl;
+}
 
-		void attack(const std::string& target);
-		void guardGate();
-		
-	private:
-};
+Brain::Brain(const Brain& src)
+{
+	std::cout << "Brain Copy constructor" << std::endl;
+	*this = src;
+}
 
-#endif
+Brain::~Brain()
+{
+	std::cout << "Brain Destructor" << std::endl;
+}
+
+Brain & Brain::operator=(const Brain& rhs)
+{
+	std::cout << "Brain equal" << std::endl;
+	(void)rhs;
+	return *this;
+}
