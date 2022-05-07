@@ -6,7 +6,7 @@
 /*   By: tidurand <tidurand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 16:40:58 by tidurand          #+#    #+#             */
-/*   Updated: 2022/05/06 16:49:54 by tidurand         ###   ########.fr       */
+/*   Updated: 2022/05/07 06:41:39 by tidurand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,11 @@ ScavTrap &ScavTrap::operator=(const ScavTrap& rhs)
 
 void	ScavTrap::attack(const std::string& target)
 {
+	if (_hitPoints < 1)
+	{
+		std::cout << "IL EST MORT (sorry)" << std::endl;
+		return ;
+	}
 	if (_energyPoints < 1)
 	{
 		std::cout << "Not enough energy" << std::endl;

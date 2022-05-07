@@ -6,7 +6,7 @@
 /*   By: tidurand <tidurand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 14:29:56 by tidurand          #+#    #+#             */
-/*   Updated: 2022/05/06 17:01:08 by tidurand         ###   ########.fr       */
+/*   Updated: 2022/05/07 06:41:33 by tidurand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,11 @@ FragTrap &FragTrap::operator=(const FragTrap& rhs)
 
 void	FragTrap::attack(const std::string& target)
 {
+	if (_hitPoints < 1)
+	{
+		std::cout << "IL EST MORT (sorry)" << std::endl;
+		return ;
+	}
 	if (_energyPoints < 1)
 	{
 		std::cout << "Not enough energy" << std::endl;

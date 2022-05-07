@@ -6,7 +6,7 @@
 /*   By: tidurand <tidurand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/09 16:01:08 by tidurand          #+#    #+#             */
-/*   Updated: 2022/05/05 09:48:40 by tidurand         ###   ########.fr       */
+/*   Updated: 2022/05/07 06:34:18 by tidurand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,11 @@ void	ClapTrap::attack(const std::string& target)
 		std::cout << "Not enough energy" << std::endl;
 		return ;
 	}
+	if (_hitPoints < 1)
+	{
+		std::cout << "IL EST MORT (sorry)" << std::endl;
+		return ;
+	}
 	this->_energyPoints -= 1;
 	std::cout << "ClapTrap " << _name << " attack " << target;
 	std::cout << ", causing " << _attackDamage << " points of damage !" << std::endl;
@@ -58,6 +63,11 @@ void	ClapTrap::attack(const std::string& target)
 
 void	ClapTrap::takeDamage(unsigned int amount)
 {
+	if (_hitPoints < 1)
+	{
+		std::cout << "Ne t'acharne pas sur le cadavre !" << std::endl;
+		return ;
+	}
 	_hitPoints -= amount;
 	std::cout << "ClapTrap " << _name << " lost ";
 	std::cout << amount << " hitPoints !" << std::endl;
@@ -68,6 +78,11 @@ void	ClapTrap::beRepaired(unsigned int amount)
 	if (_energyPoints < 1)
 	{
 		std::cout << "Not enough energy" << std::endl;
+		return ;
+	}
+	if (_hitPoints < 1)
+	{
+		std::cout << "IL EST MORT (sorry)" << std::endl;
 		return ;
 	}
 	_energyPoints -= 1;

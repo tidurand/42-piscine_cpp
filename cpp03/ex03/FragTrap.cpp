@@ -1,49 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.cpp                                       :+:      :+:    :+:   */
+/*   FragTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tidurand <tidurand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/04 16:40:58 by tidurand          #+#    #+#             */
-/*   Updated: 2022/05/07 06:41:23 by tidurand         ###   ########.fr       */
+/*   Created: 2022/05/06 14:29:56 by tidurand          #+#    #+#             */
+/*   Updated: 2022/05/07 06:33:43 by tidurand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
-ScavTrap::ScavTrap(void)
+FragTrap::FragTrap(void)
 {
-	std::cout << "Hello I'm ScavTrap Default Consctructor" << std::endl;
+	std::cout << "Hello I'm FragTrap Default Consctructor" << std::endl;
 	_hitPoints = 100;
-	_energyPoints = 50;
-	_attackDamage = 20;
+	_energyPoints = 100;
+	_attackDamage = 30;
 }
 
-ScavTrap::ScavTrap(const ScavTrap& src)
+FragTrap::FragTrap(const FragTrap& src)
 {
-	std::cout << "Hello I'm ScavTrap Copy Consctructor" << std::endl;
+	std::cout << "Hello I'm FragTrap Copy Consctructor" << std::endl;
 	_name = src._name;
 	_hitPoints = src._hitPoints;
 	_energyPoints = src._energyPoints;
 	_attackDamage = src._attackDamage;
 }
 
-ScavTrap::ScavTrap(std::string name)
+FragTrap::FragTrap(std::string name)
 {
-	std::cout << "Hello I'm ScavTrap Str Consctructor" << std::endl;
+	std::cout << "Hello I'm FragTrap Str Consctructor" << std::endl;
 	_name = name;
 	_hitPoints = 100;
-	_energyPoints = 50;
-	_attackDamage = 20;
+	_energyPoints = 100;
+	_attackDamage = 30;
 }
 
-ScavTrap::~ScavTrap()
+FragTrap::~FragTrap()
 {
-	std::cout << "Hello I'm ScavTrap Destructor" << std::endl;
+	std::cout << "Hello I'm FragTrap Destructor" << std::endl;
 }
 
-ScavTrap &ScavTrap::operator=(const ScavTrap& rhs)
+FragTrap &FragTrap::operator=(const FragTrap& rhs)
 {
 	std::cout << "Equal" << std::endl;
 	_name = rhs._name;
@@ -53,7 +53,7 @@ ScavTrap &ScavTrap::operator=(const ScavTrap& rhs)
 	return *this;
 }
 
-void	ScavTrap::attack(const std::string& target)
+void	FragTrap::attack(const std::string& target)
 {
 	if (_hitPoints < 1)
 	{
@@ -66,13 +66,12 @@ void	ScavTrap::attack(const std::string& target)
 		return ;
 	}
 	_energyPoints -= 1;
-	std::cout << "ScavTrap " << _name << " attack " << target;
+	std::cout << "FragTrap " << _name << " attack " << target;
 	std::cout << ", causing " << _attackDamage << " points of damage !" << std::endl;
 	std::cout << "Il reste " << _energyPoints << " points d'energie !" << std::endl;
 }
 
-
-void	ScavTrap::guardGate()
+void	FragTrap::highFivesGuys()
 {
-	std::cout << "Gate keeper mode activated" << std::endl;
+	std::cout << "High Fives !" << std::endl;
 }
