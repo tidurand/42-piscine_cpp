@@ -6,7 +6,7 @@
 /*   By: tidurand <tidurand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/07 04:28:09 by tidurand          #+#    #+#             */
-/*   Updated: 2022/05/09 15:28:43 by tidurand         ###   ########.fr       */
+/*   Updated: 2022/05/09 16:50:57 by tidurand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,25 @@ int main()
 		animal[i] = new Dog;
 	for (int i = 0; i < 6; i++)
 		delete animal[i];
-
+	std::cout << std::endl << std::endl;
 	Cat	a;
 	Cat b(a);
 	Cat c;
-
-	std::cout << a.getIdea[0] << std::endl;
+	std::cout << std::endl << std::endl;
+	
+	std::cout << a.getBrain()->getIdea(0) << std::endl;
+	std::cout << b.getBrain()->getIdea(0) << std::endl;
+	std::cout << c.getBrain()->getIdea(0) << std::endl;
+	a.getBrain()->setIdea(0, "A");
+	std::cout << a.getBrain()->getIdea(0) << std::endl;
+	std::cout << b.getBrain()->getIdea(0) << std::endl;
+	std::cout << c.getBrain()->getIdea(0) << std::endl;
+	c = a;
+	std::cout << c.getBrain()->getIdea(0) << std::endl;
+	c.getBrain()->setIdea(0, "C");
+	std::cout << a.getBrain()->getIdea(0) << std::endl;
+	std::cout << c.getBrain()->getIdea(0) << std::endl;
+	std::cout << std::endl << std::endl;
 	
 	return 0;
 }

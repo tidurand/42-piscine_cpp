@@ -6,7 +6,7 @@
 /*   By: tidurand <tidurand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/07 05:13:11 by tidurand          #+#    #+#             */
-/*   Updated: 2022/05/07 06:18:47 by tidurand         ###   ########.fr       */
+/*   Updated: 2022/05/09 15:53:19 by tidurand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 DiamondTrap::DiamondTrap(void)
 {
 	_name = "A";
-	_hitPoints = 100;
+	_hitPoints = ScavTrap::_hitPoints;
 	_energyPoints = 50;
 	_attackDamage = 30;
 	ClapTrap::_name = _name + "_clap_name";

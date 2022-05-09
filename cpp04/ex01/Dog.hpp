@@ -6,7 +6,7 @@
 /*   By: tidurand <tidurand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/07 01:45:31 by tidurand          #+#    #+#             */
-/*   Updated: 2022/05/09 15:14:08 by tidurand         ###   ########.fr       */
+/*   Updated: 2022/05/09 16:43:56 by tidurand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ class Dog : public Animal
 		virtual ~Dog();
 		Dog &operator=(const Dog& rhs);
 		void makeSound() const;
+		Brain *getBrain();
 	private:
 		Brain *brain;
 };

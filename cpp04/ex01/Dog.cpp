@@ -36,10 +36,16 @@ Dog & Dog::operator=(const Dog& rhs)
 {
 	std::cout << "Dog equal" << std::endl;
 	type = rhs.type;
+	brain = rhs.brain;
 	return *this;
 }
 
 void	Dog::makeSound() const
 {
 	std::cout << "Ouaf" << std::endl;
+}
+
+Brain	*Dog::getBrain()
+{
+	return (this->brain);
 }
