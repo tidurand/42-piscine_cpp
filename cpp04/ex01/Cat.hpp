@@ -6,7 +6,7 @@
 /*   By: tidurand <tidurand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/07 01:45:31 by tidurand          #+#    #+#             */
-/*   Updated: 2022/05/07 04:48:56 by tidurand         ###   ########.fr       */
+/*   Updated: 2022/05/09 15:14:17 by tidurand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ class Cat : public Animal
 	public:
 		Cat(void);
 		Cat (const Cat& src);
-		~Cat();
+		virtual ~Cat();
 		Cat &operator=(const Cat& rhs);
 		void makeSound() const;
 	private:

@@ -6,13 +6,13 @@
 /*   By: tidurand <tidurand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 11:08:49 by tidurand          #+#    #+#             */
-/*   Updated: 2022/05/09 11:43:22 by tidurand         ###   ########.fr       */
+/*   Updated: 2022/05/09 11:51:05 by tidurand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 
-Bureaucrat::Bureaucrat(string name)
+Bureaucrat::Bureaucrat(void)
 {
 
 }

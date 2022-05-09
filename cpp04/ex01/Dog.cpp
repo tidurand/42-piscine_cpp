@@ -22,9 +22,8 @@ Dog::Dog(void)
 Dog::Dog(const Dog& src)
 {
 	std::cout << "Dog Copy constructor" << std::endl;
-	*this = src;
-	delete brain;
-	brain = new Brain;
+	type = src.type;
+	brain = new Brain(*src.brain);
 }
 
 Dog::~Dog()

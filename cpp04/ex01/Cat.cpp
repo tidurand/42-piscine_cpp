@@ -23,8 +23,7 @@ Cat::Cat(const Cat& src)
 {
 	std::cout << "Cat Copy constructor" << std::endl;
 	*this = src;
-	delete brain;
-	brain = new Brain;
+	brain = new Brain(*src.brain);
 }
 
 Cat::~Cat()
