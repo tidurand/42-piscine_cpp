@@ -6,7 +6,7 @@
 /*   By: tidurand <tidurand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 17:02:39 by tidurand          #+#    #+#             */
-/*   Updated: 2022/05/09 18:06:03 by tidurand         ###   ########.fr       */
+/*   Updated: 2022/05/09 18:31:08 by tidurand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ int main()
 	Cat c;
 	std::cout << std::endl << std::endl;
 	
+	b.getBrain()->setIdea(0, "B");
 	std::cout << a.getBrain()->getIdea(0) << std::endl;
 	std::cout << b.getBrain()->getIdea(0) << std::endl;
 	std::cout << c.getBrain()->getIdea(0) << std::endl;

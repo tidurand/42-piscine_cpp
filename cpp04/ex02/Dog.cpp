@@ -36,6 +36,8 @@ Dog & Dog::operator=(const Dog& rhs)
 {
 	std::cout << "Dog equal" << std::endl;
 	type = rhs.type;
+	if (this->brain)
+		delete brain;
 	brain = rhs.brain;
 	return *this;
 }

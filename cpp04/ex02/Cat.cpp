@@ -36,6 +36,8 @@ Cat & Cat::operator=(const Cat& rhs)
 {
 	std::cout << "Cat equal" << std::endl;
 	type = rhs.type;
+	if (this->brain)
+		delete brain;
 	brain = new Brain(*rhs.brain);
 	return *this;
 }
