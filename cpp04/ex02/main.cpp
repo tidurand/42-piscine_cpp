@@ -6,7 +6,7 @@
 /*   By: tidurand <tidurand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 17:02:39 by tidurand          #+#    #+#             */
-/*   Updated: 2022/05/09 17:50:23 by tidurand         ###   ########.fr       */
+/*   Updated: 2022/05/09 18:06:03 by tidurand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,5 @@ int main()
 	std::cout << c.getBrain()->getIdea(0) << std::endl;
 	std::cout << std::endl << std::endl;
 	
-	return 0;
 	return 0;
 }
