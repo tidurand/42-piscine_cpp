@@ -8,19 +8,17 @@ do
 	echo "#ifndef ${upclass}_HPP
 # define ${upclass}_HPP
 # include <iostream>
-# include <string>
-//# include \".hpp\"
 
 class	${newclass}
 {
 	public:
-	${newclass}();
-	${newclass}(const ${newclass}& src);
-	${newclass}	&operator=(const ${newclass}& rhs);
-	~${newclass}();
+		${newclass}();
+		${newclass}(const ${newclass}& src);
+		${newclass}	&operator=(const ${newclass}& rhs);
+		~${newclass}();
 
-	protected:
-	string	_name;
+	private:
+	
 };
 
 #endif" > "${newclass}.hpp"

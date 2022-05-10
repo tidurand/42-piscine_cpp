@@ -6,13 +6,14 @@
 /*   By: tidurand <tidurand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 11:08:42 by tidurand          #+#    #+#             */
-/*   Updated: 2022/05/10 14:27:24 by tidurand         ###   ########.fr       */
+/*   Updated: 2022/05/10 16:23:09 by tidurand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef BUREAUCRAT_HPP
 # define BUREAUCRAT_HPP
 # include <iostream>
+#include "Form.hpp"
 
 class	Bureaucrat
 {
@@ -28,7 +29,7 @@ class	Bureaucrat
 				virtual const char* what() const throw()
 				{return ("Error :Grade too High");}
 		};
-		class GradeTooLowException : public std::exception
+		class GradeTooLowException
 		{
 			public:
 				virtual const char* what() const throw()
@@ -39,6 +40,7 @@ class	Bureaucrat
 		void	setGrade(int grade);
 		void	increaseGrade();
 		void	decreaseGrade();
+		void	signForm(Form &form) const;
 
 	private:
 		const std::string _name;

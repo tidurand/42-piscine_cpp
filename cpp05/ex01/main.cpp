@@ -6,10 +6,11 @@
 /*   By: tidurand <tidurand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 11:44:17 by tidurand          #+#    #+#             */
-/*   Updated: 2022/05/10 14:28:50 by tidurand         ###   ########.fr       */
+/*   Updated: 2022/05/10 16:22:48 by tidurand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Form.hpp"
 #include "Bureaucrat.hpp"
 
 int main()
@@ -17,17 +18,9 @@ int main()
 	try 
 	{
 		Bureaucrat toto("Toto", 5);
-		// Bureaucrat a("A", 500);
-		// Bureaucrat b("B", 0);
-		Bureaucrat c;
+		Form abc("abc", 5, 5);
 		std::cout << toto << std::endl;
-		toto.setGrade(75);
-		std::cout << toto << std::endl;
-		toto.decreaseGrade();
-		std::cout << toto << std::endl;
-		std::cout << c << std::endl;
-		c.decreaseGrade();
-		std::cout << c << std::endl;
+		std::cout << abc << std::endl;
 	}
 	catch (std::exception & e)
 	{
