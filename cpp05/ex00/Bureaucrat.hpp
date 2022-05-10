@@ -6,7 +6,7 @@
 /*   By: tidurand <tidurand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 11:08:42 by tidurand          #+#    #+#             */
-/*   Updated: 2022/05/10 09:17:58 by tidurand         ###   ########.fr       */
+/*   Updated: 2022/05/10 12:23:26 by tidurand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ class	Bureaucrat
 				{return ("Error :Grade too Low");}
 		};
 		const std::string getName() const;
+		void setName(std::string name);
 		int	getGrade() const;
 		void	setGrade(int grade);
 		void	increaseGrade();

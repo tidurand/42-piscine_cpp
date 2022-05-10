@@ -6,7 +6,7 @@
 /*   By: tidurand <tidurand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 11:08:49 by tidurand          #+#    #+#             */
-/*   Updated: 2022/05/10 09:21:42 by tidurand         ###   ########.fr       */
+/*   Updated: 2022/05/10 12:25:18 by tidurand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,8 @@ Bureaucrat::Bureaucrat(const Bureaucrat& src)
 
 Bureaucrat	&Bureaucrat::operator=(const Bureaucrat& rhs)
 {
-	(void)rhs;
+	_grade = rhs._grade;
+	setName(rhs._name);
 	return (*this);
 }
 
@@ -58,6 +59,11 @@ std::ostream & operator<<(std::ostream& o, const Bureaucrat& rhs)
 {
 	o << rhs.getName() << ", bureaucrat grade " << rhs.getGrade();
 	return o;
+}
+
+void	Bureaucrat::setName(std::string name)
+{
+	_name = name;
 }
 
 const std::string Bureaucrat::getName() const
