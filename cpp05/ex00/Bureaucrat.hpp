@@ -6,14 +6,13 @@
 /*   By: tidurand <tidurand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 11:08:42 by tidurand          #+#    #+#             */
-/*   Updated: 2022/05/09 11:59:17 by tidurand         ###   ########.fr       */
+/*   Updated: 2022/05/10 09:17:58 by tidurand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef BUREAUCRAT_HPP
 # define BUREAUCRAT_HPP
 # include <iostream>
-//# include ".hpp"
 
 class	Bureaucrat
 {
@@ -23,16 +22,23 @@ class	Bureaucrat
 		Bureaucrat(const Bureaucrat& src);
 		Bureaucrat	&operator=(const Bureaucrat& rhs);
 		~Bureaucrat();
-		class GradeTooHighException
+		class GradeTooHighException : public std::exception
 		{
-			
-		}
+			public:
+				virtual const char* what() const throw()
+				{return ("Error :Grade too High");}
+		};
 		class GradeTooLowException
 		{
-			
-		}
+			public:
+				virtual const char* what() const throw()
+				{return ("Error :Grade too Low");}
+		};
 		const std::string getName() const;
 		int	getGrade() const;
+		void	setGrade(int grade);
+		void	increaseGrade();
+		void	decreaseGrade();
 
 	private:
 		const std::string _name;
