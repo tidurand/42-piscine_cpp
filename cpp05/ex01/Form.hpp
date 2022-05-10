@@ -6,14 +6,14 @@
 /*   By: tidurand <tidurand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 13:50:03 by tidurand          #+#    #+#             */
-/*   Updated: 2022/05/10 16:23:46 by tidurand         ###   ########.fr       */
+/*   Updated: 2022/05/10 16:30:04 by tidurand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FORM_HPP
 # define FORM_HPP
 # include <iostream>
-// # include "Bureaucrat.hpp"
+# include "Bureaucrat.hpp"
 
 class Bureaucrat;
 

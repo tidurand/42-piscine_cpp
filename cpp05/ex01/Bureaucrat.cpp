@@ -6,7 +6,7 @@
 /*   By: tidurand <tidurand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 11:08:49 by tidurand          #+#    #+#             */
-/*   Updated: 2022/05/10 16:18:31 by tidurand         ###   ########.fr       */
+/*   Updated: 2022/05/10 16:28:25 by tidurand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,13 +86,3 @@ void	Bureaucrat::signForm(Form &form) const
 	else
 		std::cout << form.getName() << "not signed yet" << std::endl;
 }
-
-// void	Form::beSigned(Bureaucrat &bur)
-// {
-// 	if (_is_sign == 1)
-// 		std::cout << "Form already signed" << std::endl;
-// 	else if (bur.getGrade() <= _sign_grade)
-// 		_is_sign = 1;
-// 	else
-// 		throw GradeTooLowException();
-// }
