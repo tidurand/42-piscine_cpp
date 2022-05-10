@@ -12,7 +12,7 @@ do
 class	${newclass}
 {
 	public:
-		${newclass}();
+		${newclass}(void);
 		${newclass}(const ${newclass}& src);
 		${newclass}	&operator=(const ${newclass}& rhs);
 		~${newclass}();
@@ -25,7 +25,7 @@ class	${newclass}
 
 	echo "#include \"${newclass}.hpp\"
 
-${newclass}::${newclass}(string name)
+${newclass}::${newclass}(void)
 {
 
 }
