@@ -1,30 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PresidentialPardonForm.hpp                         :+:      :+:    :+:   */
+/*   ShrubberyCreationForm.hpp                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tidurand <tidurand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/11 08:18:58 by tidurand          #+#    #+#             */
-/*   Updated: 2022/05/11 14:00:27 by tidurand         ###   ########.fr       */
+/*   Created: 2022/05/11 08:18:51 by tidurand          #+#    #+#             */
+/*   Updated: 2022/05/11 12:51:23 by tidurand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PRESIDENTIALPARDONFORM_HPP
-# define PRESIDENTIALPARDONFORM_HPP
+#ifndef SHRUBBERYCREATIONFORM_HPP
+# define SHRUBBERYCREATIONFORM_HPP
 # include <iostream>
+# include <fstream>
+# include <string>
 # include "Form.hpp"
-class	PresidentialPardonForm : public Form
+
+class	ShrubberyCreationForm : public Form
 {
 	public:
-		PresidentialPardonForm(std::string target = "abc");
-		PresidentialPardonForm(const PresidentialPardonForm& src);
-		PresidentialPardonForm	&operator=(const PresidentialPardonForm& rhs);
-		~PresidentialPardonForm();
-
+		ShrubberyCreationForm(std::string name = "abc");
+		ShrubberyCreationForm(const ShrubberyCreationForm& src);
+		ShrubberyCreationForm	&operator=(const ShrubberyCreationForm& rhs);
+		~ShrubberyCreationForm();
+		class FailToCreate : public std::exception
+		{
+			public:
+				virtual const char* what() const throw()
+				{return ("Error :Fail to create file");}
+		};
 		void	execute(Bureaucrat const & executor) const;
+
 	private:
 		std::string _target;
+	
 };
 
 #endif

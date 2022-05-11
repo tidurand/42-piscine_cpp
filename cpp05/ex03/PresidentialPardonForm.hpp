@@ -6,7 +6,7 @@
 /*   By: tidurand <tidurand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 08:18:58 by tidurand          #+#    #+#             */
-/*   Updated: 2022/05/11 14:00:27 by tidurand         ###   ########.fr       */
+/*   Updated: 2022/05/11 13:10:25 by tidurand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 class	PresidentialPardonForm : public Form
 {
 	public:
-		PresidentialPardonForm(std::string target = "abc");
+		PresidentialPardonForm(std::string name = "abc");
 		PresidentialPardonForm(const PresidentialPardonForm& src);
 		PresidentialPardonForm	&operator=(const PresidentialPardonForm& rhs);
 		~PresidentialPardonForm();

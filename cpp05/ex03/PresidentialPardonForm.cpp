@@ -6,19 +6,18 @@
 /*   By: tidurand <tidurand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 08:18:40 by tidurand          #+#    #+#             */
-/*   Updated: 2022/05/11 14:02:16 by tidurand         ###   ########.fr       */
+/*   Updated: 2022/05/11 13:19:19 by tidurand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PresidentialPardonForm.hpp"
 
-PresidentialPardonForm::PresidentialPardonForm(std::string target): Form("PresidentialPardonForm", 25, 5)
+PresidentialPardonForm::PresidentialPardonForm(std::string name): Form(name, 25, 5)
 {
-	_target = target;
+	_target = name;
 }
-PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm& src): Form("PresidentialPardonForm", 25, 5)
+PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm& src): Form(src._target, 25, 5)
 {
-	*this = src;
 }
 
 PresidentialPardonForm	&PresidentialPardonForm::operator=(const PresidentialPardonForm& rhs)
