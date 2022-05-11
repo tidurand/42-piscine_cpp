@@ -6,7 +6,7 @@
 /*   By: tidurand <tidurand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 11:31:14 by tidurand          #+#    #+#             */
-/*   Updated: 2022/05/11 18:37:24 by tidurand         ###   ########.fr       */
+/*   Updated: 2022/05/11 18:47:19 by tidurand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -118,8 +118,8 @@ void	castInt(char *s)
 	double d = static_cast<double>(i);
 	std::cout << "char: " << i << std::endl;
 	std::cout << "int: " << i << std::endl;
-	std::cout << "float: " << f << std::endl;
-	std::cout << "double: " << d << std::endl;
+	std::cout << "float: " << f << ".0f" << std::endl;
+	std::cout << "double: " << d << ".0" <<std::endl;
 }
 
 void	castFloat(char *s)
