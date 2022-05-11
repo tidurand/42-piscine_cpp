@@ -6,7 +6,7 @@
 /*   By: tidurand <tidurand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 13:44:41 by tidurand          #+#    #+#             */
-/*   Updated: 2022/05/11 14:35:34 by tidurand         ###   ########.fr       */
+/*   Updated: 2022/05/11 15:47:06 by tidurand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ Intern::Intern(const Intern& src)
 	*this = src;
 }
 
-Intern	&Intern::operator=(const & rhs)
+Intern	&Intern::operator=(const Intern& rhs)
 {
-
+	(void)rhs;
 	return (*this);
 }
 
@@ -33,32 +33,22 @@ Intern::~Intern()
 
 Form *Intern::makeForm(std::string name, std::string target)
 {
-	std::cout << "Intern creates" << name << ", target is " << target << std::endl;
+	std::cout << "Intern creates " << name << ", target is " << target << std::endl;
 	std::string str[3] = {"ShrubberyCreationForm", "RobotomyRequestForm", "PresidentialPardonForm"};
-	void (Intern::*ptr[3])(void);
 	int i = 0;
 	
-	ptr[0] = &Intern::s;
-	ptr[1] = &Intern::r;
-	ptr[2] = &Intern::p;
-	while (i < 3 && level != str[i])
+	while (i < 3 && name != str[i])
 		i++;
 	switch (i)
 	{
 	case 0:
-		(this->*ptr[0])();
-		break;
+		return new ShrubberyCreationForm(target);
 	case 1:
-		(this->*ptr[1])();
-		break;
+		return new RobotomyRequestForm(target);
 	case 2:
-		(this->*ptr[2])();
-		break;
+		return new PresidentialPardonForm(target);
 	default:
-		std::cout << "Bad name" << std::endl;
-		break;
+		throw BadName();
 	}
+	return NULL;
 }
-
-void	Intern::s(void)
-{}

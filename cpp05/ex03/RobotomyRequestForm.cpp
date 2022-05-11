@@ -6,18 +6,19 @@
 /*   By: tidurand <tidurand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 08:18:45 by tidurand          #+#    #+#             */
-/*   Updated: 2022/05/11 13:06:35 by tidurand         ###   ########.fr       */
+/*   Updated: 2022/05/11 15:34:33 by tidurand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "RobotomyRequestForm.hpp"
 
-RobotomyRequestForm::RobotomyRequestForm(std::string name): Form(name, 72, 45)
+RobotomyRequestForm::RobotomyRequestForm(std::string target): Form("RobotomyRequestForm", 72, 45)
 {
-	_target = name;
+	_target = target;
 }
-RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm& src): Form(src._target, 72, 45)
+RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm& src): Form("RobotomyRequestForm", 72, 45)
 {
+	(void)src;
 }
 
 RobotomyRequestForm	&RobotomyRequestForm::operator=(const RobotomyRequestForm& rhs)

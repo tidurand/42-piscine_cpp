@@ -6,7 +6,7 @@
 /*   By: tidurand <tidurand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 08:18:51 by tidurand          #+#    #+#             */
-/*   Updated: 2022/05/11 12:51:23 by tidurand         ###   ########.fr       */
+/*   Updated: 2022/05/11 15:26:24 by tidurand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 class	ShrubberyCreationForm : public Form
 {
 	public:
-		ShrubberyCreationForm(std::string name = "abc");
+		ShrubberyCreationForm(std::string target = "abc");
 		ShrubberyCreationForm(const ShrubberyCreationForm& src);
 		ShrubberyCreationForm	&operator=(const ShrubberyCreationForm& rhs);
 		~ShrubberyCreationForm();
