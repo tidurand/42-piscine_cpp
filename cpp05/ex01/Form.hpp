@@ -6,7 +6,7 @@
 /*   By: tidurand <tidurand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 13:50:03 by tidurand          #+#    #+#             */
-/*   Updated: 2022/05/10 16:30:04 by tidurand         ###   ########.fr       */
+/*   Updated: 2022/05/11 08:46:49 by tidurand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ class	Form
 		bool getIsSign() const {return _is_sign;};
 		int	getSignGrade() const {return _sign_grade;};
 		int	getExeGrade() const {return _exe_grade;};
+		void setIsSign(bool sign) {_is_sign = sign;};
 		
 	private:
 		const std::string _name;

@@ -6,7 +6,7 @@
 /*   By: tidurand <tidurand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 13:49:16 by tidurand          #+#    #+#             */
-/*   Updated: 2022/05/10 16:28:06 by tidurand         ###   ########.fr       */
+/*   Updated: 2022/05/11 10:48:44 by tidurand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,5 +59,13 @@ void	Form::beSigned(Bureaucrat &bur)
 	else if (bur.getGrade() <= _sign_grade)
 		_is_sign = 1;
 	else
+		throw GradeTooLowException();
+}
+
+void	Form::execute(Bureaucrat const & executor) const
+{
+	if (_is_sign == 0)
+		throw NotSignedException();
+	if (executor.getGrade() > _exe_grade)
 		throw GradeTooLowException();
 }

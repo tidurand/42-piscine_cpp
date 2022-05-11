@@ -6,7 +6,7 @@
 /*   By: tidurand <tidurand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 11:08:49 by tidurand          #+#    #+#             */
-/*   Updated: 2022/05/10 16:42:42 by tidurand         ###   ########.fr       */
+/*   Updated: 2022/05/11 08:47:28 by tidurand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,12 @@ void	Bureaucrat::decreaseGrade()
 void	Bureaucrat::signForm(Form &form) const
 {
 	if (form.getIsSign() == 1)
-		std::cout << form.getName() << " signed" << std::endl;
+		std::cout << "Form already signed" << std::endl;
+	else if (_grade <= form.getSignGrade())
+	{
+		form.setIsSign(1);
+		std::cout << _name <<" signed " << form.getName() << std::endl;
+	}
 	else
-		std::cout << form.getName() << " not signed yet" << std::endl;
+		std::cout << _name <<"couldn't signed " << form.getName() << "because grade too low" << std::endl;
 }

@@ -6,7 +6,7 @@
 /*   By: tidurand <tidurand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 11:08:42 by tidurand          #+#    #+#             */
-/*   Updated: 2022/05/10 16:30:31 by tidurand         ###   ########.fr       */
+/*   Updated: 2022/05/11 11:10:18 by tidurand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,8 @@ class	Bureaucrat
 		void	increaseGrade();
 		void	decreaseGrade();
 		void	signForm(Form &form) const;
+		void	executeForm(Form const & form);
+		
 
 	private:
 		const std::string _name;
