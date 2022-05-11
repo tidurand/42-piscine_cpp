@@ -6,7 +6,7 @@
 /*   By: tidurand <tidurand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 08:18:36 by tidurand          #+#    #+#             */
-/*   Updated: 2022/05/11 10:39:32 by tidurand         ###   ########.fr       */
+/*   Updated: 2022/05/11 11:58:16 by tidurand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,21 +30,15 @@ ShrubberyCreationForm::~ShrubberyCreationForm()
 {
 }
 
-void	ShrubberyCreationForm::beSigned(Bureaucrat &bur)
+void	ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 {
-	if (getIsSign() == 1)
-		std::cout << "Form already signed" << std::endl;
-	else if (bur.getGrade() <= getSignGrade())
-		setIsSign(1);
-	else
+	if (getIsSign() == 0)
+		throw NotSignedException();
+	if (executor.getGrade() > getExeGrade())
 		throw GradeTooLowException();
-}
-
-void	ShrubberyCreationForm::create_tree(void)
-{
 	std::fstream	file;
-	_target.append("_shrubbery");
-	file.open(_target.c_str(), std::ios::out);
+	std::string filename =_target + "_shrubbery";
+	file.open(filename.c_str(), std::ios::out);
 	if (!file.is_open())
 		throw FailToCreate();
 

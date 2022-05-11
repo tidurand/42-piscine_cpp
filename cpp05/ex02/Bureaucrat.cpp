@@ -6,7 +6,7 @@
 /*   By: tidurand <tidurand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 11:08:49 by tidurand          #+#    #+#             */
-/*   Updated: 2022/05/11 11:12:19 by tidurand         ###   ########.fr       */
+/*   Updated: 2022/05/11 13:31:02 by tidurand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,12 +92,12 @@ void	Bureaucrat::signForm(Form &form) const
 		std::cout << _name <<" couldn't signed " << form.getName() << " because grade too low" << std::endl;
 }
 
-void	executeForm(Form const & form)
+void	Bureaucrat::executeForm(Form const & form)
 {
-	else if (_grade <= form.getExeGrade())
+	if (_grade <= form.getExeGrade())
 	{
-		//EXECUTE
 		std::cout << _name <<" execute " << form.getName() << std::endl;
+		form.execute(*this);
 	}
 	else
 		std::cout << _name <<" couldn't execute " << form.getName() << " because grade too low" << std::endl;

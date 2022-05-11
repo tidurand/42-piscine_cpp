@@ -6,13 +6,13 @@
 #    By: tidurand <tidurand@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/31 17:01:42 by tidurand          #+#    #+#              #
-#    Updated: 2022/05/11 13:20:08 by tidurand         ###   ########.fr        #
+#    Updated: 2022/05/11 11:34:00 by tidurand         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS =	main.cpp Bureaucrat.cpp Form.cpp ShrubberyCreationForm.cpp RobotomyRequestForm.cpp PresidentialPardonForm.cpp
+SRCS =	main.cpp Cast.cpp
 
-INCS = Bureaucrat.hpp Form.hpp ShrubberyCreationForm.hpp RobotomyRequestForm.hpp PresidentialPardonForm.hpp
+INCS = Cast.hpp
 
 OBJS = $(SRCS:.cpp=.o)
 
@@ -20,7 +20,7 @@ CXX = c++
 
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
-NAME = Bureaucrat
+NAME = conv
 
 all: $(NAME)
 

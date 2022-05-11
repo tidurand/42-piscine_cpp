@@ -6,7 +6,7 @@
 /*   By: tidurand <tidurand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 13:50:03 by tidurand          #+#    #+#             */
-/*   Updated: 2022/05/11 08:46:49 by tidurand         ###   ########.fr       */
+/*   Updated: 2022/05/11 12:11:28 by tidurand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,11 +41,11 @@ class	Form
 
 		void	beSigned(Bureaucrat &bur);
 
-		std::string getName() const {return _name;};
-		bool getIsSign() const {return _is_sign;};
-		int	getSignGrade() const {return _sign_grade;};
-		int	getExeGrade() const {return _exe_grade;};
-		void setIsSign(bool sign) {_is_sign = sign;};
+		std::string getName() const ;
+		bool getIsSign() const ;
+		int	getSignGrade() const ;
+		int	getExeGrade() const ;
+		void setIsSign(bool sign) ;
 		
 	private:
 		const std::string _name;

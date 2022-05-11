@@ -6,7 +6,7 @@
 /*   By: tidurand <tidurand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 13:50:03 by tidurand          #+#    #+#             */
-/*   Updated: 2022/05/11 10:47:15 by tidurand         ###   ########.fr       */
+/*   Updated: 2022/05/11 12:09:10 by tidurand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,14 +45,14 @@ class	Form
 				{return ("Error :Form not signed");}
 		};
 		
-		virtual void	beSigned(Bureaucrat &bur) = 0;
-		void	execute(Bureaucrat const & executor) const;
+		virtual void	beSigned(Bureaucrat &bur);
+		virtual void	execute(Bureaucrat const & executor) const = 0;
 
-		std::string getName() const {return _name;};
-		bool getIsSign() const {return _is_sign;};
-		int	getSignGrade() const {return _sign_grade;};
-		int	getExeGrade() const {return _exe_grade;};
-		void setIsSign(bool sign) {_is_sign = sign;};
+		std::string getName() const;
+		bool getIsSign() const;
+		int	getSignGrade() const;
+		int	getExeGrade() const;
+		void setIsSign(bool sign);
 		
 	private:
 		const std::string _name;
