@@ -6,13 +6,10 @@
 /*   By: tidurand <tidurand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 11:44:17 by tidurand          #+#    #+#             */
-/*   Updated: 2022/05/11 15:42:21 by tidurand         ###   ########.fr       */
+/*   Updated: 2022/05/11 15:52:27 by tidurand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ShrubberyCreationForm.hpp"
-#include "RobotomyRequestForm.hpp"
-#include "PresidentialPardonForm.hpp"
 #include "Intern.hpp"
 #include "Bureaucrat.hpp"
 
