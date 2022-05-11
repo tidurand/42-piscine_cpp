@@ -6,7 +6,7 @@
 /*   By: tidurand <tidurand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 11:31:14 by tidurand          #+#    #+#             */
-/*   Updated: 2022/05/11 18:47:19 by tidurand         ###   ########.fr       */
+/*   Updated: 2022/05/11 19:20:18 by tidurand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,15 +107,15 @@ void	castChar(char *s)
 
 	std::cout << "char: " << s[0] << std::endl;
 	std::cout << "int: " << i << std::endl;
-	std::cout << "float: " << f << std::endl;
-	std::cout << "double: " << d << std::endl;
+	std::cout << "float: " << f << ".0f" << std::endl;
+	std::cout << "double: " << d << ".0" << std::endl;
 }
 
 void	castInt(char *s)
 {
-	int i = atoi(s);
-	float f = static_cast<float>(i);
-	double d = static_cast<double>(i);
+	double d = atof(s);
+	float f = static_cast<float>(d);
+	int i = static_cast<int>(d);
 	std::cout << "char: " << i << std::endl;
 	std::cout << "int: " << i << std::endl;
 	std::cout << "float: " << f << ".0f" << std::endl;
@@ -124,6 +124,7 @@ void	castInt(char *s)
 
 void	castFloat(char *s)
 {
+	
 	std::cout << "char: " << s << std::endl;
 	std::cout << "int: " << s << std::endl;
 	std::cout << "float: " << s << std::endl;
