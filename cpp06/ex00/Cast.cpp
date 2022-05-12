@@ -6,7 +6,7 @@
 /*   By: tidurand <tidurand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 11:31:14 by tidurand          #+#    #+#             */
-/*   Updated: 2022/05/11 19:20:18 by tidurand         ###   ########.fr       */
+/*   Updated: 2022/05/12 12:04:46 by tidurand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,8 @@ bool isInt(char *s)
 			return false;
 		i++;
 	}
+	if (atof(s) > 2147483647 || atof(s) < -2147483648)
+		return false;
 	return true;
 }
 
@@ -48,9 +50,8 @@ bool isFloat(char *s)
 			break;
 		i++;
 	}
-	if (s[i] != '.' || !s[i] || isdigit(s[i + 1]) == 0)
-		return false;
-	i++;
+	if (s[i] == '.' && isdigit(s[i + 1]))
+		i++;
 	while (s[i + 1])
 	{
 		if (isdigit(s[i]) == 0)
@@ -73,9 +74,8 @@ bool isDouble(char *s)
 			break;
 		i++;
 	}
-	if (s[i] != '.' || !s[i] || !s[i + 1])
-		return false;
-	i++;
+	if (s[i] == '.' && isdigit(s[i + 1]))
+		i++;
 	while (s[i])
 	{
 		if (isdigit(s[i]) == 0)
@@ -90,12 +90,12 @@ int	searchType(char *s)
 	int type = 0;
 	if (isChar(s) == 1)
 		type = CHAR;
-	if (isInt(s) == 1)
-		type = INT;
 	if (isFloat(s) == 1)
 		type = FLOAT;
 	if (isDouble(s) == 1)
 		type = DOUBLE;
+	if (isInt(s) == 1)
+		type = INT;
 	return type;
 }
 
@@ -116,25 +116,46 @@ void	castInt(char *s)
 	double d = atof(s);
 	float f = static_cast<float>(d);
 	int i = static_cast<int>(d);
-	std::cout << "char: " << i << std::endl;
+	char c = static_cast<char>(d);
+	if (isprint(c))
+		std::cout << "char: " << c << std::endl;
+	else
+		std::cout << "char: " << "no printable" << std::endl;
 	std::cout << "int: " << i << std::endl;
-	std::cout << "float: " << f << ".0f" << std::endl;
-	std::cout << "double: " << d << ".0" <<std::endl;
+	std::cout << "float: " << f << std::endl;
+	std::cout << "double: " << d <<std::endl;
 }
 
 void	castFloat(char *s)
 {
 	
-	std::cout << "char: " << s << std::endl;
-	std::cout << "int: " << s << std::endl;
-	std::cout << "float: " << s << std::endl;
-	std::cout << "double: " << s << std::endl;
+	double d = atof(s);
+	float f = static_cast<float>(d);
+	int i = static_cast<int>(d);
+	char c = static_cast<char>(d);
+	if (isprint(c))
+		std::cout << "char: " << c << std::endl;
+	else
+		std::cout << "char: " << "no printable" << std::endl;
+	std::cout << "int: " << i << std::endl;
+	std::cout << "float: " << f << std::endl;
+	std::cout << "double: " << d <<std::endl;
 }
 
 void	castDouble(char *s)
 {
-	std::cout << "char: " << s << std::endl;
-	std::cout << "int: " << s << std::endl;
-	std::cout << "float: " << s << std::endl;
-	std::cout << "double: " << s << std::endl;
+	double d = atof(s);
+	float f = static_cast<float>(d);
+	int i = static_cast<int>(d);
+	char c = static_cast<char>(d);
+	if (isprint(c))
+		std::cout << "char: " << c << std::endl;
+	else
+		std::cout << "char: " << "no printable" << std::endl;
+	if (atof(s) > 2147483647 || atof(s) < -2147483648)
+		std::cout << "int: " << "impossible" << std::endl;
+	else
+		std::cout << "int: " << i << std::endl;
+	std::cout << "float: " << f  << std::endl;
+	std::cout << "double: " << d <<std::endl;
 }
