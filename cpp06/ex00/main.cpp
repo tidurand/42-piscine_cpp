@@ -6,7 +6,7 @@
 /*   By: tidurand <tidurand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 11:25:38 by tidurand          #+#    #+#             */
-/*   Updated: 2022/05/12 12:03:38 by tidurand         ###   ########.fr       */
+/*   Updated: 2022/05/12 13:43:09 by tidurand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,19 +22,18 @@ int main(int ac, char **av)
 	int type;
 	
 	type = searchType(av[1]);
-	std::cout << type << std::endl; //DEBUG
 	switch (type)
 	{
-	case 1:
+	case CHAR:
 		castChar(av[1]);
 		break;
-	case 2:
+	case INT:
 		castInt(av[1]);
 		break;
-	case 3:
+	case FLOAT:
 		castFloat(av[1]);
 		break;
-	case 4:
+	case DOUBLE:
 		castDouble(av[1]);
 		break;
 	
