@@ -6,7 +6,7 @@
 /*   By: tidurand <tidurand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 11:31:14 by tidurand          #+#    #+#             */
-/*   Updated: 2022/05/12 12:14:26 by tidurand         ###   ########.fr       */
+/*   Updated: 2022/05/12 13:02:10 by tidurand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,9 @@ bool isInt(char *s)
 bool isFloat(char *s)
 {
 	int i = 0;
+	std::string str = s;
+	if (str == -inf || str == )
+		return true;
 	if (s[0] == '-' && isdigit(s[1]))
 		i++;
 	while (s[i])
@@ -120,7 +123,7 @@ void	castInt(char *s)
 	if (isprint(c))
 		std::cout << "char: " << c << std::endl;
 	else if (atof(s) > 127 || atof(s) < -128)
-		std::cout << "int: " << "impossible" << std::endl;
+		std::cout << "char: " << "impossible" << std::endl;
 	else
 		std::cout << "char: " << "no printable" << std::endl;
 	std::cout << "int: " << i << std::endl;
@@ -138,10 +141,10 @@ void	castFloat(char *s)
 	if (isprint(c))
 		std::cout << "char: " << c << std::endl;
 	else if (atof(s) > 127 || atof(s) < -128)
-		std::cout << "int: " << "impossible" << std::endl;
+		std::cout << "char: " << "impossible" << std::endl;
 	else
 		std::cout << "char: " << "no printable" << std::endl;
-	if (atof(s) > 2147483647 || atof(s) < -2147483648)
+	if (atof(s) > 2147483647 || atof(s) < -2147483648 || isnan(d) || isinf(d))
 		std::cout << "int: " << "impossible" << std::endl;
 	else
 		std::cout << "int: " << i << std::endl;
@@ -158,10 +161,10 @@ void	castDouble(char *s)
 	if (isprint(c))
 		std::cout << "char: " << c << std::endl;
 	else if (atof(s) > 127 || atof(s) < -128)
-		std::cout << "int: " << "impossible" << std::endl;
+		std::cout << "char: " << "impossible" << std::endl;
 	else
 		std::cout << "char: " << "no printable" << std::endl;
-	if (atof(s) > 2147483647 || atof(s) < -2147483648)
+	if (atof(s) > 2147483647 || atof(s) < -2147483648 || isnan(d) || isinf(d))
 		std::cout << "int: " << "impossible" << std::endl;
 	else
 		std::cout << "int: " << i << std::endl;

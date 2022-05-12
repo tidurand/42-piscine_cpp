@@ -6,13 +6,14 @@
 /*   By: tidurand <tidurand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 11:34:33 by tidurand          #+#    #+#             */
-/*   Updated: 2022/05/11 18:36:34 by tidurand         ###   ########.fr       */
+/*   Updated: 2022/05/12 12:59:37 by tidurand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <string>
 #include <stdlib.h>
+#include <cmath>
 #define CHAR 1
 #define INT 2
 #define FLOAT 3
