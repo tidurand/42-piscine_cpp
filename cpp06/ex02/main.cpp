@@ -6,7 +6,7 @@
 /*   By: tidurand <tidurand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/12 15:01:34 by tidurand          #+#    #+#             */
-/*   Updated: 2022/05/12 15:45:16 by tidurand         ###   ########.fr       */
+/*   Updated: 2022/05/12 15:55:50 by tidurand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,33 +57,29 @@ void	identify(Base &p)
 		std::cout << "class A" << std::endl;
 	}
 	catch (std::exception & e)
-	{
-		// std::cerr << e.what() << std::endl;
-	}
+	{}
 	try
 	{
 		p = (dynamic_cast<B&>(p));
 		std::cout << "class B" << std::endl;
 	}
 	catch (std::exception & e)
-	{
-		// std::cerr << e.what() << std::endl;
-	}
+	{}
 	try
 	{
 		p = (dynamic_cast<C&>(p));
 		std::cout << "class C" << std::endl;
 	}
 	catch (std::exception & e)
-	{
-		// std::cerr << e.what() << std::endl;
-	}
+	{}
 }
 
 int main()
 {
 	Base *base;
+
 	base = generate();
+	identify(base);
 	identify(*base);
 	delete base;
 	return 0;
