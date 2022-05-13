@@ -6,7 +6,7 @@
 /*   By: tidurand <tidurand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 12:49:29 by tidurand          #+#    #+#             */
-/*   Updated: 2022/05/13 13:11:46 by tidurand         ###   ########.fr       */
+/*   Updated: 2022/05/13 16:13:18 by tidurand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,24 @@
 template <class T>
 class Array
 {
-	Array(void);
-	Array(int n);
-	Array(const Array<T> & src);
-	Array<T> &operator=(const Stack<T> & rhs);
-	~Array();
-	Array<T> operator[](); // todo
-	int	size(void);
+	public :
+		Array(void): _size(0){};
+		Array(int n): _array(new T[n]), _size(n){};
+		Array(const Array<T> & src):_array(new T[src._size]), _size(src._size){};
+		~Array(){delete [size]};
+		
+		Array<T> &operator=(const Array<T> & rhs);
+		Array<T> operator[](const int);
+		
+		int	size(void);
+		
+		class BadIndex : public std::exception
+		{
+			public:
+				virtual const char* what() const throw()
+				{return ("Error :Bad Index");}
+		};
+	private :
+		_size;
+		_*array
 }
