@@ -6,7 +6,7 @@
 /*   By: tidurand <tidurand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/12 17:54:36 by tidurand          #+#    #+#             */
-/*   Updated: 2022/05/12 17:55:17 by tidurand         ###   ########.fr       */
+/*   Updated: 2022/05/13 11:13:16 by tidurand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,9 @@
 
 int main()
 {
+	int tab[4] = {1, 2, 3, 4};
+	char str[6] = "salut";
+
+	iter(tab, 4, print(tab));
 	return 0;
 }

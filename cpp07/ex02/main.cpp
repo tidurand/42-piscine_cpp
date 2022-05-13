@@ -1,30 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   iter.hpp                                           :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tidurand <tidurand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/12 17:55:54 by tidurand          #+#    #+#             */
-/*   Updated: 2022/05/13 11:23:50 by tidurand         ###   ########.fr       */
+/*   Created: 2022/05/13 12:48:47 by tidurand          #+#    #+#             */
+/*   Updated: 2022/05/13 12:49:19 by tidurand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#include "Array.hpp"
 
-template<class T>
-void	print(T a)
+int main()
 {
-	std::cout << a << std::endl;
-}
-
-template<class T>
-void	iter(T *tab, int size, void (*f)(T))
-{
-	int i = 0;
-	while (i < size)
-	{
-		f(tab[i]);
-		i++;
-	}
+	return 0;
 }
