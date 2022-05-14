@@ -6,13 +6,13 @@
 #    By: tidurand <tidurand@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/31 17:01:42 by tidurand          #+#    #+#              #
-#    Updated: 2022/05/12 17:55:38 by tidurand         ###   ########.fr        #
+#    Updated: 2022/05/14 11:11:22 by tidurand         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRCS =	main.cpp
 
-INCS = iter.hpp
+INCS = Array.hpp
 
 OBJS = $(SRCS:.cpp=.o)
 
@@ -20,7 +20,7 @@ CXX = c++
 
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
-NAME = temp
+NAME = Array
 
 all: $(NAME)
 
