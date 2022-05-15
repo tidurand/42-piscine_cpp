@@ -6,7 +6,7 @@
 /*   By: tidurand <tidurand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/15 14:02:21 by tidurand          #+#    #+#             */
-/*   Updated: 2022/05/15 16:11:22 by tidurand         ###   ########.fr       */
+/*   Updated: 2022/05/15 16:55:21 by tidurand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,5 +52,13 @@ int main()
 	Span cpy(numbers);
 	std::cout << cpy.longestSpan() << std::endl;
 	std::cout << cpy.shortestSpan() << std::endl;
+	try
+	{
+		cpy.addNumber(1000);
+	}
+	catch (std::exception & e)
+	{
+		std::cerr << e.what() << std::endl;
+	}
 	return 0;
 }

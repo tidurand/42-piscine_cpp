@@ -6,7 +6,7 @@
 /*   By: tidurand <tidurand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/15 14:02:03 by tidurand          #+#    #+#             */
-/*   Updated: 2022/05/15 16:06:56 by tidurand         ###   ########.fr       */
+/*   Updated: 2022/05/15 16:55:00 by tidurand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,10 @@ Span	&Span::operator=(const Span& rhs)
 {
 	_sizemax = rhs._sizemax;
 	_size = rhs._size;
-	for (unsigned int i = 0; i < _size; i++)
-		_array[i] = rhs._array[i];
+	// _array = rhs._array; //as assign pb with shortestspan
+	// for (unsigned int i=0; i < rhs._size; i++)
+    //    _array.push_back(rhs._array[i]);
+	copy(rhs._array.begin(), rhs._array.end(), back_inserter(_array));
 	return (*this);
 }
 
