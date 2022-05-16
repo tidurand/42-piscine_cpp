@@ -6,7 +6,7 @@
 /*   By: tidurand <tidurand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/15 16:58:54 by tidurand          #+#    #+#             */
-/*   Updated: 2022/05/15 17:18:17 by tidurand         ###   ########.fr       */
+/*   Updated: 2022/05/16 12:23:50 by tidurand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,28 @@ int main()
 	std::cout << *it << std::endl;
 	++it;
 	}
-	std::stack<int> s(mstack);
+	std::cout << std::endl;
+
+	MutantStack<std::string> mstack2;
+	if (mstack2.empty() == true)
+		std::cout << "Empty Stack" << std::endl;
+	mstack2.push("abc");
+	mstack2.push("def");
+	mstack2.push("ghi");
+	mstack2.push("jkl");
+	mstack2.push("mno");
+	std::cout << mstack2.size() << std::endl;
+	mstack2.pop();
+	std::cout << mstack2.size() << std::endl;
+	std::cout << *(mstack2.begin()) << std::endl;
+	std::cout << mstack2.top() << std::endl;
+	std::cout << std::endl;
+	MutantStack<std::string>::iterator it2 = mstack2.begin();
+	MutantStack<std::string>::iterator ite2 = mstack2.end();
+	while (it2 != ite2)
+	{
+		std::cout << *it2 << std::endl;
+		++it2;
+	}
 	return 0;
 }

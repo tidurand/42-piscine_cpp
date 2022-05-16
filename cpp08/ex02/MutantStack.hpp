@@ -6,7 +6,7 @@
 /*   By: tidurand <tidurand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/15 16:59:53 by tidurand          #+#    #+#             */
-/*   Updated: 2022/05/15 17:12:08 by tidurand         ###   ########.fr       */
+/*   Updated: 2022/05/16 12:27:01 by tidurand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ template<typename T>
 class MutantStack : public std::stack<T>
 {
 	public:
-		MutantStack() {};
-		MutantStack(const MutantStack<T>& src) {*this = src;};
+		MutantStack(){};
+		MutantStack(const MutantStack<T>& src){*this = src;};
 		MutantStack<T>& operator=(const MutantStack<T>& rhs) 
 		{
 			this->c = rhs.c;
@@ -30,9 +30,9 @@ class MutantStack : public std::stack<T>
 		};
 		~MutantStack() {};
 
-		typedef typename std::stack<T>::container_type::iterator iterator;
+		typedef typename std::deque<T>::iterator iterator;
 
-		iterator begin() { return this->c.begin(); };
-		iterator end() { return this->c.end(); };
+		iterator begin() {return this->c.begin();};
+		iterator end() {return this->c.end();};
 };
 #endif
